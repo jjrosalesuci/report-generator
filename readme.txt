@@ -1,6 +1,11 @@
 1- Paso instalar node 12
 2- npm install
 
+Documentacion del template engine
+
+https://ejs.co/#docs
+
+
 Para acceder a un reporte por la web ya mokeado
 http://localhost:3000/emergency/html
 

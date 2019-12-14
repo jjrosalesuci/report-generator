@@ -11,93 +11,10 @@
 
 <main>
     <%= params.care.name %>
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        v
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>ss
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p> sss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p> ss
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>s
-
-        
+    
+    <% params.care.items.forEach(function(item) { %>
+       <div> <%= item %> </div>
+    <% }); %>
    
 </main>
 
