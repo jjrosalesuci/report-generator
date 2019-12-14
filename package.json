@@ -15,7 +15,8 @@
     "ejs-lint": "^0.3.0",
     "express": "^4.17.1",
     "html-pdf": "^2.2.0",
-    "requestify": "^0.2.5"
+    "requestify": "^0.2.5",
+    "uniqid": "^5.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
