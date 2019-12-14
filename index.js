@@ -19,17 +19,19 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
+app.use('/public', express.static(__dirname + '/public'));
+
 const mocks = require ('./mocks/mocks');
 
-app.use('/static', express.static(__dirname + '\\reports'));
+app.get('/favico.ico' , function(req , res){/*code*/});
+app.get('/favicon.ico' , function(req , res){/*code*/});
 
-app.get('/:report', function(req, res) {
+app.get('/:report/html', function(req, res) {
     const reportId = req.params.report;
     const params =  mocks[reportId];
     res.render(`pages/${reportId}`, {params});
 });
 
-app.get('/favico.ico' , function(req , res){/*code*/});
 
 app.get('/:fileId/pdf', function(req, res) {
   const fileId = req.params.fileId;
