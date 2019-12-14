@@ -1,0 +1,10 @@
+[2019-12-14T09:24:16.885] [ERROR] cheese - 2
+[2019-12-14T09:25:10.508] [ERROR] cheese - 2
+[2019-12-14T09:25:45.867] [ERROR] error - 2
+[2019-12-14T09:28:18.324] [ERROR] error - undefined
+[2019-12-14T09:28:18.324] [ERROR] error - hola
+[2019-12-14T09:29:29.507] [ERROR] error - { care: { name: 'Juan penacho' } }
+[2019-12-14T09:29:29.507] [ERROR] error - hola
+[2019-12-14T09:29:31.072] [ERROR] error - { care: { name: 'Juan penacho' } }
+[2019-12-14T09:29:31.072] [ERROR] error - hola
+[2019-12-14T09:30:12.303] [ERROR] error - hola

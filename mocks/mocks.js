@@ -1,7 +1,7 @@
 module.exports = {
     'index' : {
         care: {
-            name: 'Name',
+            name: 'Nombre desde el mocks',
             arrayelemt: [
              'aa',
               'b'
