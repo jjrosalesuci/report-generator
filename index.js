@@ -61,6 +61,7 @@ app.post('/:report', function(req, res) {
     const reportId = req.params.report;
     const params = req.body
     console.log('params', params);
+    // console.log(JSON.stringify(params));
     console.log('reportId', reportId);
     res.render(`pages/${reportId}`, {params}, (err, html) => {
       if (!err) {

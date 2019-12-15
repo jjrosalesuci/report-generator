@@ -10,8 +10,139 @@
 </header>
 
 <main>
- Emergencia
+    <h2 class="center-text">CONSULTA AMBULATORIA URGENTE CENTRALIZADA</h2>
+    <div class="section">
+       <div>
+            Nombre :
+          <%= params.Care.CarePatient.FirstName %>
+          <%= params.Care.CarePatient.SecondName %>
+          <%= params.Care.CarePatient.FirstSurname %>
+          <%= params.Care.CarePatient.SecondSurname %>
+       </div>
+       <div>
+            Edad:  <%= params.Care.CarePatient.Age %>
+       </div>
+       <div>
+            Matricula :  <%= params.Care.CarePatient.RegistrationNumber %>
+       </div>
+       <div>
+           Categoria : <%= params.Care.CarePatient.Category.Name %>
+       </div>
+       <div>
+           Fecha Consulta: <%= params.Care.Date %>
+       </div>
+    </div>
+
+     <!-- Care History Consultations-->
+     <div class="section">
+     <div><b>CONSULTAS</b></div>
+     <% params.Care.History.forEach(function(item) { %>
+        <% if (item.Origin) { %>
+            <div> Procedencia: <%= item.Origin.Name %> </div>
+        <% } %>
+        <% if (item.ConsultingReason) { %>
+            <div> Motivo de la consulta: <%= item.ConsultingReason %> </div>
+        <% } %>
+        <% if (item.Anamnesis) { %>
+            <div> Anamesis: <%= item.Anamnesis %> </div>
+        <% } %>
+        <% if (item.PhysicalExaminations) { %>
+            <div> Examen Fisico: <%= item.PhysicalExaminations %> </div>
+        <% } %>
+        <% if (item.Diagnostics) { %>
+            <div>Diagnóstico/Problema: <%= item.Diagnostics %> </div>
+        <% } %>
+        <% if (item.CareEvolution) { %>
+            <div>Evolucion de Emergencia: <%= item.CareEvolution %> </div>
+        <% } %>
+        <% if (item.ReleaseIndications) { %>
+            <div> Indicaciones al Alta de emergencia: <%= item.ReleaseIndications %> </div>
+        <% } %>
+        <% if (item.Destination) { %>
+            <div>  Destino/Traslado: <%= item.Destination.Name %> </div>
+        <% } %>
+
+        <div> <b>Doctor</b>: <%= item.CareUser.Name %> </div>
+        <div> <b>Fecha</b>: <%= item.Date %> </div>
+
+     <% }); %>
+     </div>
+
+    <!-- Care Base-->
+     <div class="section">
+           <% if (params.Care.Origin) { %>
+               <div> Procedencia: <%= params.Care.Origin.Name %> </div>
+           <% } %>
+           <% if (params.Care.ConsultingReason) { %>
+               <div> Motivo de la consulta: <%= params.Care.ConsultingReason %> </div>
+           <% } %>
+           <% if (params.Care.Anamnesis) { %>
+               <div> Anamesis: <%= params.Care.Anamnesis %> </div>
+           <% } %>
+           <% if (params.Care.PhysicalExaminations) { %>
+               <div> Examen Fisico: <%= params.Care.PhysicalExaminations %> </div>
+           <% } %>
+           <% if (params.Care.Diagnostics) { %>
+               <div>Diagnóstico/Problema: <%= params.Care.Diagnostics %> </div>
+           <% } %>
+           <% if (params.Care.CareEvolution) { %>
+               <div>Evolucion de Emergencia: <%= params.Care.CareEvolution %> </div>
+           <% } %>
+           <% if (params.Care.ReleaseIndications) { %>
+               <div> Indicaciones al Alta de emergencia: <%= params.Care.ReleaseIndications %> </div>
+           <% } %>
+           <% if (params.Care.Destination) { %>
+               <div> Destino/Traslado: <%= params.Care.Destination.Name %> </div>
+           <% } %>
    
+           <div> <b>Doctor</b>: <%= params.Care.CareUser.Name %> </div>
+           <div> <b>Fecha</b>: <%= params.Care.Date %> </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="section">
+        <div><b>CONTROLES</b></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Presión arterial (S/D)</th>
+                    <th>Temperatura axilar</th>
+                    <th>Temperatura rectal</th>
+                    <th>Frecuencia cardiaca</th>
+                    <th>Frecuencia respiratoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% params.Controls.forEach(function(control) { %>
+                <tr ng-repeat="control in controls">
+                    <td><%= control.Date %></td>
+                    <td><%= control.BloodPressure_S %> / <%= control.BloodPressure_D %></td>
+                    <td><%= control.TemperatureAxilar %></td>
+                    <td><%= control.TemperatureRectal %></td>
+                    <td><%= control.HardFrecuency %></td>
+                    <td><%= control.RespiratoryFrecuency %></td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Consultations-->
+    <div class="section">
+        <div><b>INTERCONSULTAS</b></div>
+        <% params.Consultations.forEach(function(consultation) { %>
+            <div> Fecha: <%= consultation.Date %> </div>
+            <div> Consulta: <%= consultation.Consultation %> </div>
+            <div> Médico: 
+                <%= consultation.Retainer.FirstName %>
+                <%= consultation.Retainer.SecondName %>
+                <%= consultation.Retainer.FirstSurname %>
+                <%= consultation.Retainer.SecondSurname %>
+             </div>
+        <% }); %>
+    </div>
+
 </main>
 
 <footer>
