@@ -10,7 +10,7 @@
 </header>
 
 <main>
-    <h2 class="center-text">CONSULTA AMBULATORIA URGENTE CENTRALIZADA</h2>
+    <h2 class="center-text">CONSULTA AMBULATORIA NO URGENTE - POLICLINICA</h2>
     <div class="section">
        <div>
             Nombre :
@@ -99,51 +99,6 @@
    
            <div> <b>Doctor</b>: <%= params.Care.CareUser.Name %> </div>
            <div> <b>Fecha</b>: <%= params.Care.Date %> </div>
-    </div>
-
-    <!-- Controls -->
-    <div class="section">
-        <div><b>CONTROLES</b></div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Fecha</th>
-                    <th>Presión arterial (S/D)</th>
-                    <th>Temperatura axilar</th>
-                    <th>Temperatura rectal</th>
-                    <th>Frecuencia cardiaca</th>
-                    <th>Frecuencia respiratoria</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% params.Controls.forEach(function(control) { %>
-                <tr ng-repeat="control in controls">
-                    <td><%= control.Date %></td>
-                    <td><%= control.BloodPressure_S %> / <%= control.BloodPressure_D %></td>
-                    <td><%= control.TemperatureAxilar %></td>
-                    <td><%= control.TemperatureRectal %></td>
-                    <td><%= control.HardFrecuency %></td>
-                    <td><%= control.RespiratoryFrecuency %></td>
-                </tr>
-                <% }); %>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- Consultations-->
-    <div class="section">
-        <div><b>INTERCONSULTAS</b></div>
-        <% params.Consultations.forEach(function(consultation) { %>
-            <br>
-            <div> Fecha: <%= consultation.Date %> </div>
-            <div> Consulta: <%= consultation.Consultation %> </div>
-            <div> Médico: 
-                <%= consultation.Retainer.FirstName %>
-                <%= consultation.Retainer.SecondName %>
-                <%= consultation.Retainer.FirstSurname %>
-                <%= consultation.Retainer.SecondSurname %>
-            </div>
-        <% }); %>
     </div>
 
 </main>
